@@ -1,4 +1,3 @@
-
 ///// STRINGS /////
 // Show the 10th letter of the string
 console.log ('Hello World' [10])
@@ -72,6 +71,134 @@ else {
     console.log(`You don't have the required amount of money - ${difference * -1} is missing`)
 }
 
-/** COMPARISON OPERATOR
- * 
+/** Logical comparators
+ * && checks if the left and right side of the comparison is true
+ *  true && true => true
+ * true && false => false
+ * false && true => false
+ * false && false => false
+ * If there's a false in the comparison the result will be automatically false
  */
+
+let ca$h = 50
+let priice = 40
+let isStoreOpen = true
+if (ca$h >= priice && isStoreOpen === true) {
+    console.log('Print the receipt')
+}
+
+/**
+ * || checks if the left or right side of the comparison is true
+ * true || true => true
+ * true || false => true
+ * false || true => true
+ * false || false => false
+ *  eg : isStoreOpen === false is the same as adding "!" to the variable " !isStoreOpen === false"
+ * */ 
+
+/**
+ * Falsy values
+ * A falsy value is considered as "false" when converted to a boolean
+ * - undefined
+ * - null
+ * - NaN
+ * - 0
+ * - "" 
+ * - false
+ * If we want to check if the value is Truthy or Falsy just go to the console or in the
+ * conditions then type"!!" followed with the value eg : !!0 (console answer is false)
+ * */
+
+let val = "";
+
+if (val) {
+    console.log("Truthy value", !!val)
+}
+else {
+    console.log(!!val)
+}
+
+/**
+ * A truthy value is considered as 'true' when converted to a boolean
+ * Such as numbers ans strings
+ * - 10
+ * - 3,14
+ * - "Frontend Simplified"
+ * - "false"
+ * - "0"
+ * - []
+ * - {}
+ */
+
+let value = "Eno";
+
+if (value) {
+    console.log(!!value)
+}
+
+
+/**
+ * TERNERY OPERATORS
+ * it avoids Ifs or Elses when we need only one line of code
+ */
+
+let Ca$h = 39
+let PrIce = 40
+let storeOpenn = true
+
+let correct = Ca$h >= PrIce && storeOpenn ? 'give receipt' : 'do not give receipt'
+console.log(correct);
+
+
+/**
+ * LOOPS
+ * 
+ * - Repeat the same code over and over again
+ * ( For loop ; while loop ; do while loop)
+ * - DRY = Don't repeat yourself
+ */
+
+// let count = 1;
+
+// while ( count <= 100) {
+//     console.log(count)
+//     count = count + 1;
+// }
+
+/**
+ * i initialize the count and must start from 0
+ * i <= 100 is to define until when to count
+ * ++ is the same as i + 1 so if i is inferior to 100 add 1 each time
+ */
+for (let i = 0; i <= 100; i++) {
+    console.log(i);
+}
+
+
+for (let i = 1; i <= 20; i++) {
+    // Putting Frontend Simplified first is because we don't need 15 to be printed twice
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log(`${i} -> Frontend Simplified`)
+    }
+    else if (i % 3 === 0) {
+        console.log(`${i} -> Frontend`)
+    }
+    else if (i % 5 === 0) {
+        console.log(`${i} -> Simplified`)
+    }
+    else {
+        console.log (`${i} -> ${i}`)
+    }
+}
+
+
+
+// Prin out every character from the string "Frontend Simplified"
+
+// To loop the string i must be written this way : i < str.length
+
+const course = "Frontend Simplified"
+
+for (let i = 0; i < course.length; i++) {
+    console.log(course[i])
+}
