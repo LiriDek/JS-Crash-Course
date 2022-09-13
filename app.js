@@ -241,3 +241,99 @@ const convertCelsiusToFahrenheit = (celsius) => {
     return  celsius * 1.8 + 32
 }
 console.log(convertCelsiusToFahrenheit(2))
+
+
+/**
+ * ARRAYS
+ * 
+ * Data structure that can hold multiple data values in one variable
+ */
+
+let arr = [20, 30, 40, 50, 100]
+
+//First element of array:
+console.log(arr[0])
+
+//last element of array :
+// console.log(arr[4]) or
+console.log(arr[arr.length - 1])
+
+// Add elements to array with ".push" next to the variable
+arr.push(200)
+// Added 200 to array next to the previous numbers
+
+console.log(arr);
+
+// filter the elements of array ".filter" next to the variable
+// If we have only one argument we can remove the () : let newArr = arr.filter(element => {
+// when we have only one line of code we could write it this way :
+/**
+ * let newArr = arr.filter(element => element < 50)
+ * console.log(newArr)
+ */
+let newArr = arr.filter((element) => {
+    console.log(element)
+    if (element < 50) {
+        return true;
+    }
+})
+
+console.log(newArr)
+
+// Filter out all the 'FAIL' elements in an array
+
+ let grades = ['A+', 'A', 'FAIL']
+
+ let newGrades = grades.filter((element) => {
+    console.log(element)
+    if (element !== 'FAIL') {
+        return true;
+    }
+ })
+
+// (in one line) let newGrades = grades.filter(element => element !== 'FAIL')
+ console.log(newGrades)
+
+
+ // This is the way to do it without .filter
+ let goodGrades = []
+
+ for (let i = 0; i < grades.length; i++) {
+    if (grades[i] !== 'FAIL') {
+        goodGrades.push(grades[i]);
+    }
+ }
+
+ console.log(goodGrades);
+
+
+ // .map apply different information to the array
+
+ let array = [1, 4, 9, 16]
+
+ let newArray = arr.map ((element) => {
+    console.log(element)
+    return 'dog';
+ })
+// short way : let newArray = array.map(element => 'dog')
+ console.log(newArray)
+
+ // Turn each element in an array of dollars into cents
+
+ let dollars = [1, 5, 10, 3];
+
+ let centsDollars = dollars.map ((element) => {
+    console.log(element)
+    return element * 100;
+ })
+ // Short way : let centsDollars = dollars.map(element => element * 100)
+ console.log(centsDollars)
+
+
+ // Try to loop it without using the map method
+let cents = []
+
+ for (let i = 0; i < dollars.length; i++) {
+    cents.push(dollars[i] * 100);
+ }
+console.log(cents)
