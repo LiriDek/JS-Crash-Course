@@ -166,7 +166,7 @@ console.log(correct);
 // }
 
 /**
- * i initialize the count and must start from 0
+ * i initialize the count and must be set to initialize the loop
  * i <= 100 is to define until when to count
  * ++ is the same as i + 1 so if i is inferior to 100 add 1 each time
  */
@@ -202,3 +202,42 @@ const course = "Frontend Simplified"
 for (let i = 0; i < course.length; i++) {
     console.log(course[i])
 }
+
+/**
+ * Functions
+ * 
+ * It's a block of code designed to perform a particular task
+ * 
+ */
+
+// DRY Don't repeat yourself
+
+// Function definition (Parameter)
+// Between () it's the parameter
+function welcomePersonToFES(emri) {
+    console.log(`Welcome to FES, ${emri}`)
+}
+
+// Call the function (Argument)
+// The parameter here is the name
+welcomePersonToFES('Eno');
+
+function sumOfTwoNumbers(num1, num2) {
+    return num1 + num2
+}
+console.log(sumOfTwoNumbers(10, 20));
+
+// Resolving the conversion form celsius to fahrenheit with a Function
+// David just wrote celsius into the parameters and returned celsius * 1.8 + 32
+// So there's only one argument when we call the function
+function celciusToFahrenheit(celsius, multiplicator, addedNumber) {
+    return celsius * multiplicator + addedNumber
+}
+console.log(celciusToFahrenheit(20, 1.8, 32))
+
+// Other way to do that
+
+const convertCelsiusToFahrenheit = (celsius) => {
+    return  celsius * 1.8 + 32
+}
+console.log(convertCelsiusToFahrenheit(2))
