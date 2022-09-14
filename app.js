@@ -418,3 +418,38 @@ register({
     lessonsCompleted: [0, 1]
     })
 console.log(users)
+
+
+/**
+ * DOM (Document Object Model)
+ * 
+ * The DOM allows you to access and change the styling and content of elements on your webste
+ * 
+ */
+
+// First way of accessing an element
+document.querySelector('#title')
+
+/// Second way (When we have an id)
+document.getElementById('title')
+
+//Change HTML .innerHTML  = ''
+// += is adding both elements together. It works like an addition
+document.querySelector('.title').innerHTML += 'Frontend Simplified'
+
+// Change CSS .style
+document.querySelector(".title").style.fontSize = '16px'
+
+/**
+ * function changeTitleToRed() {
+    console.log('clicked');
+    document.querySelector(".title").style.color = 'red'
+}
+ */
+
+
+function toggleDarkMode() {
+    // classList access to body's class clist which is empty
+    // but if we add .toggle() , it's going to toggle with the class dark-theme
+    document.querySelector('body').classList.toggle("dark-theme")
+}
