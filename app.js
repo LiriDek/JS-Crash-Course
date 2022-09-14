@@ -65,7 +65,7 @@ if (cash > price) {
 else if (cash === price) {
     console.log("You paid the exact amount, have a nice day!")
 }
-// couldn't apply () conditions to else
+// can't apply () conditions to else
 else {
     // the multiplication is a way to receive a positve number
     console.log(`You don't have the required amount of money - ${difference * -1} is missing`)
@@ -193,7 +193,7 @@ for (let i = 1; i <= 20; i++) {
 
 
 
-// Prin out every character from the string "Frontend Simplified"
+// Prints out every character from the string "Frontend Simplified"
 
 // To loop the string i must be written this way : i < str.length
 
@@ -337,3 +337,84 @@ let cents = []
     cents.push(dollars[i] * 100);
  }
 console.log(cents)
+
+/**
+ * OBJECTS
+ * 
+ * Used to store multiple properties in one variable
+ * 
+ */
+
+/**
+ * let user = {
+    username: 'Eno',
+    email: 'eno.meta@gmx.fr',
+    subscriptionStatus: 'VIP',
+    discordId: 'Eno#1109',
+    lessonsCompleted: [0, 1]
+}
+
+console.log(user.username[0])
+console.log(user.subscriptionStatus)
+
+//Play with .map to change the values
+console.log(user.lessonsCompleted.map(element => element * 2))
+ */
+
+// In order to have multiple users we have to store the datas in an array :
+
+let users = [
+{
+    username: 'Eno',
+    email: 'eno.meta@gmx.fr',
+    subscriptionStatus: 'VIP',
+    discordId: 'Eno#1109',
+    password: 'test123',
+    lessonsCompleted: [0, 1]
+},
+{
+    username: 'David',
+    email: 'david@gmail.com',
+    subscriptionStatus: 'VIP',
+    discordId: 'David Bragg#0001',
+    password: 'test123',
+    lessonsCompleted: [0, 1, 2, 3, 4]
+}
+];
+
+// users[1] this is how we manipulate datas from a specific user :
+// console.log(users[1].lessonsCompleted.map(element => element * 2))
+
+function login(email, password) {
+    for (let i = 0 ; i < users.length ; i++) {
+        if (users[i].email === email) {
+            console.log(users[i]);
+            if (users[i].password === password) {
+                console.log('Log the user in - the details are correct')
+            }
+            else {
+                console.log('password is incorrect - try again')
+            }
+            // Return ends up the loop if the conditions matches or not after a try
+            return;
+        }
+    }
+    console.log('Could not find an email that matches')
+}
+
+login('eno.meta@gmx.fr', 'test123')
+
+function register(user) {
+        users.push(user);
+}
+    
+
+register({
+    username: 'try', 
+    email: 'try.gmail.com', 
+    subscriptionStatus: 'not VIP', 
+    discordId: 'try#1234', 
+    password: "try123", 
+    lessonsCompleted: [0, 1]
+    })
+console.log(users)
